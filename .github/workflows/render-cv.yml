@@ -1,16 +1,7 @@
+# Disabled: cv.yml format differs from RenderCV schema; use JSONResume (resume.json) for CV page
 name: Render a CV
 on:
-  push:
-    branches:
-      - main
-      - master
-    paths:
-      - "_data/cv.yml"
-      - "assets/rendercv/design.yaml"
-      - "assets/rendercv/locale.yaml"
-      - "assets/rendercv/settings.yaml"
-  workflow_call:
-  workflow_dispatch:
+  workflow_dispatch: # manual trigger only; push disabled
 permissions:
   contents: write
 jobs:
